@@ -1,0 +1,12 @@
+.div1{
+    border-style: solid;
+    width: auto;
+    padding-left: 20px;
+    background-color: cadetblue;
+    font-family: 'Open Sans', sans-serif;
+    color: floralwhite;
+}
+.div2{
+    padding-top: 10px;
+    padding-left: 15px;
+}
