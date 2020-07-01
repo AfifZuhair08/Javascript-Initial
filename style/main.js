@@ -19,7 +19,7 @@ const side = 5;
 console.log(side);
 
 //String, Numbers, Boolean, null, undefined
-const name = 'Afif';
+const name = "Afif";
 const age = 25;
 const rating = 4.7;
 const isCool = true;
@@ -30,34 +30,102 @@ let z;
 console.log(typeof isCool);
 
 //concatenation string
-console.log('My name is ' +name+ ' and I am ' +age);
+console.log("My name is " + name + " and I am " + age);
 
 //template string
 const initial = `My name is ${name} and I am ${age}`;
 console.log(initial);
 
-//calcualte number of string 
+//calcualte number of string
 console.log(name.length);
 
 //make string uppercase
 console.log(initial.toUpperCase());
 
 //split into array
-console.log(name.split(''));
+console.log(name.split(""));
 
 //split few words
-const type = 'four-wheel, twowheel, front-wheel';
-console.log(type.split(', '));
+const type = "four-wheel, twowheel, front-wheel";
+console.log(type.split(", "));
 
 //ARRAYS
-const numbers = new Array(1,2,3);
+const numbers = new Array(1, 2, 3);
 console.log(numbers);
 
-const fruits = ['apples','oranges','pears'];//[0,1,2]
+const fruits = ["apples", "oranges", "pears"]; //[0,1,2]
 console.log(fruits);
 
-/**
- * const can be override its array value, not its single value
+/*
+ * const type can be override if it contains arrays, not if it has single value
  */
-fruits[3] = 'durian';
+fruits[3] = "durian";
+
+//add value to the array
+fruits.push("mangos");
+
+//push to the first array
+fruits.unshift('strawberries');
+
+//delete the last one
+fruits.pop();
+
+//check array container
+console.log(Array.isArray('hello'));
+
+console.log(fruits.indexOf('oranges'));
+
 console.log(fruits);
+
+
+//ARRAY INTERMEDIATE//
+const person = {
+    firstName: 'Afif',
+    lastName: 'Zuhair',
+    age: 25,
+    hobbies: ['music','racing','coding'],
+    address:{
+        street: 'Jalan Jelatang',
+        city: 'Masai',
+        state: 'Johor'
+    }
+};
+
+//add property outside the array
+person.email = 'afifzuhair@gmail.com';
+
+//customize the property of the property
+const { firstName, lastName, address:{city}} = person;
+
+console.log(person.email, person.age, person.hobbies, city, person.address.state);
+
+
+
+//ARRAY LIST//
+const todo = [
+    {
+        id: 1,
+        text: 'Shopping',
+        isCompleted: false
+    },
+    {
+        id: 2,
+        text: 'Wash Car',
+        isCompleted: true
+    },
+    {
+        id: 3,
+        text: 'Take out trash',
+        isCompleted: false
+    }
+]
+console.log(todo);
+//convert into JSON body format
+const todoJSON = JSON.stringify(todo);
+console.log(todoJSON);
+
+
+//LOOP - FOR//
+for(let i=0; i<=10; i++){
+    console.log("Number "+i);
+}
