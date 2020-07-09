@@ -65,67 +65,45 @@ fruits[3] = "durian";
 fruits.push("mangos");
 
 //push to the first array
-fruits.unshift('strawberries');
+fruits.unshift("strawberries");
 
 //delete the last one
 fruits.pop();
 
 //check array container
-console.log(Array.isArray('hello'));
+console.log(Array.isArray("hello"));
 
-console.log(fruits.indexOf('oranges'));
+console.log(fruits.indexOf("oranges"));
 
 console.log(fruits);
 
-
 //ARRAY INTERMEDIATE//
 const person = {
-    firstName: 'Afif',
-    lastName: 'Zuhair',
-    age: 25,
-    hobbies: ['music','racing','coding'],
-    address:{
-        street: 'Jalan Jelatang',
-        city: 'Masai',
-        state: 'Johor'
-    }
+  firstName: "Afif",
+  lastName: "Zuhair",
+  age: 25,
+  hobbies: ["music", "racing", "coding"],
+  address: {
+    street: "Jalan Jelatang",
+    city: "Masai",
+    state: "Johor",
+  },
 };
 
 //add property outside the array
-person.email = 'afifzuhair@gmail.com';
+person.email = "afifzuhair@gmail.com";
 
 //customize the property of the property
-const { firstName, lastName, address:{city}} = person;
+const {
+  firstName,
+  lastName,
+  address: { city },
+} = person;
 
-console.log(person.email, person.age, person.hobbies, city, person.address.state);
-
-
-
-//ARRAY LIST//
-const todo = [
-    {
-        id: 1,
-        text: 'Shopping',
-        isCompleted: false
-    },
-    {
-        id: 2,
-        text: 'Wash Car',
-        isCompleted: true
-    },
-    {
-        id: 3,
-        text: 'Take out trash',
-        isCompleted: false
-    }
-]
-console.log(todo);
-//convert into JSON body format
-const todoJSON = JSON.stringify(todo);
-console.log(todoJSON);
-
-
-//LOOP - FOR//
-for(let i=0; i<=10; i++){
-    console.log("Number "+i);
-}
+console.log(
+  person.email,
+  person.age,
+  person.hobbies,
+  city,
+  person.address.state
+);
